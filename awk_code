@@ -1,0 +1,22 @@
+#!/usr/bin/awk -f
+
+BEGIN{
+}
+
+{
+    sum1+=$1
+    sum2+=$2
+    sum3+=$3
+    count++
+}
+
+END{
+    printf("sum\t%d\t%d\t%d\n",sum1,sum2,sum3)
+    printf("avg\t%d\t%d\t%d\n",sum1/count,sum2/count,sum3/count)
+}
+
+# input has:
+# 4 10 21
+# 6 20 31
+
+#challange was to calculate columnwise sum and avg. Exp ans was sum as 10,30,52, and avg as 5, 15, 26
